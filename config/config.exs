@@ -104,6 +104,9 @@ config :nerves_hub_link,
   host: "https://your-nerves-hub-server.com",
   configurator: NervesHubLink.Configurator.SharedSecret
 
+config :nerves, :firmware,
+  fwup_conf: "config/fwup.conf"
+
 if Mix.target() == :host do
   import_config "host.exs"
 else
